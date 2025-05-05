@@ -1,5 +1,5 @@
 # Click-Buy
-<h3>The advent of the digital era has significantly transformed the retail landscape, with e-commerce becoming a dominant force in the global economy. This project focuses on the development of an e-commerce shopping website that provides a seamless and secure online shopping experience for customers. The website is designed to facilitate the buying and selling of products, incorporating essential features to enhance user interaction, ensure safe transactions, and optimize the overall shopping experience.</h3>h3>
+<h3>The advent of the digital era has significantly transformed the retail landscape, with e-commerce becoming a dominant force in the global economy. This project focuses on the development of an e-commerce shopping website that provides a seamless and secure online shopping experience for customers. The website is designed to facilitate the buying and selling of products, incorporating essential features to enhance user interaction, ensure safe transactions, and optimize the overall shopping experience.</h3>
 
 <h2>Objectives:</h2>
 1. The primary objective of this project is to design a comprehensive e-commerce platform that:
