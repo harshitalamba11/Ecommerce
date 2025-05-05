@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.click&buy.com</title>
+    <!-- ALL CSS LINK -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../common files/style.css">
+    <!-- <link rel="stylesheet" href="navbar.css"> -->
+    <link rel="stylesheet" href="header.css">
+    <!-- <link rel="stylesheet" href="navbar.css"> -->
+    <link rel="shortcut icon" type="image/jpg" href="/common files/image/icon.jpg">
+    <!-- FONT-AWESOME -->
+    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
+    <!-- FONT-->
+    <style>
+        #an{ text-decoration: none;
+            color: black;
+
+        }
+        #section_1 img{
+            width: unset;
+        }
+        ol > li > span{
+            color: #505050;
+            font-weight: 700;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <!-- HEADER-MENU SECTION -->
+    <header>
+        <div id="logo">
+            <img src="../common files/image/icon.jpg" alt="brandLogo" >
+        </div>
+        <ul id="nav_bar">
+            <li><a href="../Landingpage/index.html">Home</a></li>
+            <li id="megamenu_container"><a href="../menspage/mens.html">men</a></li>
+            <li><a href="../womensdata/womens.html">women</a></li>
+            <li><a href="../kidspage/kids.html">kids</a></li>
+            <li><a href="../home living product/home_furnishing.html">home & living</a></li>
+            <li id="studio"><a href="../Beauty/Beauty.html">Beauty</a><span>new</span></li>
+        </ul> 
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more">
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+              <div id="drop">
+                <a href="../Profile/profile.html" class="dropList">login</a>
+                <a href="../Profile/signup.html" class="dropList">sign up</a>
+              </div>
+
+              <i class="fa-regular fa-user"></i>
+              <span>profile</span>
+          </div>
+            <div> <i class="fa-regular fa-heart"></i>
+                <a href="../wishlist/wishlist.html" id="an">
+               
+                <span>wishlist</span>
+                </a>
+            </div>
+            <div>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <a href="../wishlist/cart.html" id="an">
+                <span>bag</span></a>
+            </div>
+        </div>
+                   <!-- TOGGLE MENU -->
+                   <div id="toggle">
+                    <i class='bx bx-menu dropbtn' onclick="myFunction()"></i>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="top">
+                            <a href="#">men</a>
+                            <a href="#">women</a>
+                            <a href="#">kids</a>
+                            <a href="#">home & living</a>
+                            <a href="#">beauty</a>
+                            <a href="#">studio</a>
+                        </div>
+                        <div class="bottom">
+                            <i class="fa-regular fa-user fa_user" id="profile"></i>
+                            <i class="fa-regular fa-heart fa_wishlist"></i>
+                            <i class="fa-solid fa-bag-shopping fa_cart"></i>
+                        </div>               
+                    </div>
+                </div>
+    </header>
+
+    
+    <div class="slider">
+        <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <!--slide images start-->
+            <div class="slide first">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/28/4ac3be4b-f02c-4106-8dc9-be1898a81def1648463267842-Desktop-Banner-----1920x504.jpg"  
+                alt="">
+            </div>
+            <div class="slide">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/8f1a79c7-3f11-4608-9f31-30a03a606cb41647537798522-SS22-DesktopBanners-Unisex.jpg"
+                alt="">
+            </div>
+            <div class="slide">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/1439d458-3f9b-4a49-830c-a47a126bb9311647456798699-Roadster_Desk_Banner.jpg"
+                alt="">
+            </div>
+            <div class="slide">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/52df3f93-8d0f-412d-b416-fc665706199d1647456798690-Casual-Shoes_Dk.jpg"
+                alt="">
+            </div>
+        </div>
+
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+
+
+    <!-- <h1>DEALS OF THE DAY</h1>
+    <div id="deals">
+
+    </div> -->
+
+
+    <h1>DEALS OF THE DAY</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('deals')">&#10094;</button>
+    <div id="deals" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('deals')">&#10095;</button>
+</div>
+
+<h1>BEST OF CLICK&BUY EXCLUSIVE BRANDS</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('best')">&#10094;</button>
+    <div id="best" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('best')">&#10095;</button>
+</div>
+
+    <!-- <h1>TOP PICKS</h1>
+    <div id="top">
+    </div> -->
+
+
+    <h1>TOP PICKS</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('top')">&#10094;</button>
+    <div id="top" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('top')">&#10095;</button>
+</div>
+
+    <!-- <h1>CATEGORIES TO BAG</h1>
+    <div id="categories">
+    </div> -->
+
+    <h1>CATEGORIES TO BAG</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('categories')">&#10094;</button>
+    <div id="categories" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('categories')">&#10095;</button>
+</div>
+
+    <!-- <h1>DEALS ON TOP BRANDS</h1>
+    <div id="dealsTop">
+    </div>
+    <h1>UNMISSABLE THIS SEASON</h1>
+    <div id="unmissable">
+    </div>
+    <h1>COLOURS OF THE SEASON</h1>
+    <div id="colours">
+
+    </div>
+    <h1>TOP INFLUENCERS EXCLUSIVE STYLE</h1>
+    <div id="topInfluencers"></div>
+    <h1>BUDGET PICKS INFLUENCERS LOVE</h1>
+    <div id="budget"></div>
+    <h1>TRENDING OUTFIT BY INFLUENCERS</h1>
+    <div id="trending">
+    </div> -->
+
+    <h1>DEALS ON TOP BRANDS</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('dealsTop')">&#10094;</button>
+    <div id="dealsTop" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('dealsTop')">&#10095;</button>
+</div>
+
+<h1>UNMISSABLE THIS SEASON</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('unmissable')">&#10094;</button>
+    <div id="unmissable" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('unmissable')">&#10095;</button>
+</div>
+
+<h1>COLOURS OF THE SEASON</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('colours')">&#10094;</button>
+    <div id="colours" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('colours')">&#10095;</button>
+</div>
+
+<h1>TOP INFLUENCERS EXCLUSIVE STYLE</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('topInfluencers')">&#10094;</button>
+    <div id="topInfluencers" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('topInfluencers')">&#10095;</button>
+</div>
+
+<h1>BUDGET PICKS INFLUENCERS LOVE</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('budget')">&#10094;</button>
+    <div id="budget" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('budget')">&#10095;</button>
+</div>
+
+<h1>TRENDING OUTFIT BY INFLUENCERS</h1>
+<div class="carousel-container">
+    <button class="scroll-btn left" onclick="scrollLeft('trending')">&#10094;</button>
+    <div id="trending" class="carousel">
+        <!-- Images go here via JS -->
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('trending')">&#10095;</button>
+</div>
+
+
+   
+        <!-- FOOTER SECTION -->
+        <footer>
+        <section id="section_1">
+            <div id="left">
+                <div>
+                    <h4>online shopping</h4>
+                    <p>men</p>
+                    <p>women</p>
+                    <p>home & living</p>
+                    <p>beauty</p>
+                    <p>gift cards</p>
+                    <p>Click&Buy insider<span id="latest">New</span></p>
+                </div>
+                <div>
+                    <h4>useful links</h4>
+                    <p>men</p>
+                    <p>faq</p>
+                    <p>t&c</p>
+                    <p>terms of use</p>
+                    <p>track order</p>
+                    <p>shipping</p>
+                    <p>cancellation</p>
+                    <p>returns</p>
+                    <p>whitehat</p>
+                    <p>blog</p>
+                    <p>careers</p>
+                    <p>privacy policy</p>
+                    <p>site map</p>
+                    <p>corporate information</p>
+                </div>
+                <div>
+                    <h4>experience Click&Buy app on mobile</h4>
+                    <img src="https://bit.ly/3LluZ4L" alt="android">
+                    <img src="https://bit.ly/3DmWQys" alt="ios">
+                    <h4 id="social_connect">keep in touch</h4>
+                    <div>
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div>
+                    <img src="https://bit.ly/3JPiL47" alt="original">
+                    <p> <span>100% ORIGINAL</span> guarantee for all products at Click&Buy</p>
+                </div>
+                <div>
+                    <img src="https://bit.ly/3uBalH4" alt="return_policy">
+                    <p><span>Return within 30days</span> of receiving your order</p>
+                </div>
+            </div>
+        </section>
+        <section id="section_2">
+            <h4>popular searches</h4>
+            <div></div>
+        </section>
+        <section id="section_3">
+            <a href="">sherwani</a><a href="">track pants</a><a href="">blazzers</a><a href="">sweater</a><a href="">jeans</a><a href="">suit</a><a href="">trouser</a><a href="">shalwar</a><a href="">bracelets</a><a href="">sherwani</a><a href="">cargo</a><a href="">shirt</a><a href="">sherwani</a><a href="">shelwar</a><a href="">Bracelets</a><a href="">sherwani</a><a href="">blazzers</a><a href="">sherwani</a><a href="">bracelets</a><a href="">rings</a><a href="">blazzers</a><a href="">sherwani</a><a href="">sherwani</a><a href="">sherwani</a><a href="">blazzers</a><a href="">blazzers</a><a href="">blazzers</a><a href="">shelwar</a><a href="">shalwar</a><a href="">jeans</a>
+        </section>
+        <section id="section_4">
+            <p>In case of any concern <a href="#"> contact us</a></p>
+            <p>&#169;2024 www.click&buy.com. All rights reserved.</p>
+        </section>
+        <hr>
+        <section id="section_5">
+            <h4>ONLINE SHOPPING MADE EASY AT CLICK&BUY</h4>
+            <p>If you would like to experience the best of online shopping for men, women and kids in India, you are at the right place. Click&Buy is the ultimate destination for fashion and lifestyle, being host to a wide array of merchandise including clothing, footwear, accessories, jewellery, personal care products and more. It is time to redefine your style statement with our treasure-trove of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at Click&Buy from the comfort of your home and get your favourites delivered right to your doorstep.
+            </p>
+        </section>
+        <section id="section_6">
+            <h4>BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</h4>
+            <p>Be it clothing, footwear or accessories, Click&Buy offers you the ideal combination of fashion and functionality for men, women and kids. You will realise that the sky is the limit when it comes to the types of outfits that you can purchase for different occasions.</p>
+            <div>
+            <ol>
+                <li> <span> Smart men’s clothing </span> - At Click&Buy you will find myriad options in smart formal shirts and trousers, cool T-shirts and jeans, or kurta and pyjama combinations for men. Wear your attitude with printed T-shirts. Create the back-to-campus vibe with varsity T-shirts and distressed jeans. Be it gingham, buffalo, or window-pane style, checked shirts are unbeatably smart. Team them up with chinos, cuffed jeans or cropped trousers for a smart casual look. Opt for a stylish layered look with biker jackets. Head out in cloudy weather with courage in water-resistant jackets. Browse through our innerwear section to find supportive garments which would keep you confident in any outfit.</li>
+                <li> <span> Trendy women’s clothing </span>-  Online shopping for women at Click&Buy is a mood-elevating experience. Look hip and stay comfortable with chinos and printed shorts this summer. Look hot on your date dressed in a little black dress, or opt for red dresses for a sassy vibe. Striped dresses and T-shirts represent the classic spirit of nautical fashion. Choose your favourites from among Bardot, off-shoulder, shirt-style, blouson, embroidered and peplum tops, to name a few. Team them up with skinny-fit jeans, skirts or palazzos. Kurtis and jeans make the perfect fusion-wear combination for the cool urbanite. Our grand sarees and lehenga-choli selections are perfect to make an impression at big social events such as weddings. Our salwar-kameez sets, kurtas and Patiala suits make comfortable options for regular wear.</li>
+                <li> <span> Fashionable footwear </span> - While clothes maketh the man, the type of footwear you wear reflects your personality. We bring you an exhaustive lineup of options in casual shoes for men, such as sneakers and loafers. Make a power statement at work dressed in brogues and oxfords. Practice for your marathon with running shoes for men and women. Choose shoes for individual games such as tennis, football, basketball, and the like. Or step into the casual style and comfort offered by sandals, sliders, and flip-flops. Explore our lineup of fashionable footwear for ladies, including pumps, heeled boots, wedge-heels, and pencil-heels. Or enjoy the best of comfort and style with embellished and metallic flats.
+            </li>
+            </ol>
+            </div>
+            <p>Since fast fashion seems to be extremely hard to keep up with these days, a quick update on what is trending in accessories, clothing and footwear would certainly be of great help. Click&Buy Studio helps you stay connected to the most beloved and sought after brands such as Puma, Coverstory, The Label Life and so many more. Your feed keeps you updated with stories of what the brands are creating including clothing, footwear and jewellery, along with their new seasonal collections.</p>
+            <p>Click&Buy is one such online shopping website that joins the list of platforms that help curate a personalised fashion feed. Named theClick&Buy Studio, this personalised search feed brings you the latest men and women’s fashion trends, celebrity styles, branded content and daily updates from your favourite fashion labels.</p>
+        </section>
+        <section id="section_6">
+            <h4>SHOP ONLINE AT CLICK&BUY WITH COMPLETE CONVENIENCE</h4>
+            <p>another reason why Click&Buy is the best of all online stores is the complete convenience that it offers. You can view your favourite brands with price options for different products in one place. A user-friendly interface will guide you through your selection process. Comprehensive size charts, product information and high-resolution images help you make the best buying decisions. You also have the freedom to choose your payment options, be it card or cash-on-delivery. The 14-day returns policy gives you more power as a buyer. Additionally, the try-and-buy option for select products takes customer-friendliness to the next level.
+
+                Enjoy the hassle-free experience as you shop comfortably from your home or your workplace. You can also shop for your friends, family and loved-ones and avail our gift services for special occasions.</p>
+        </section>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          if (localStorage.getItem("isLoggedIn") === "true") {
+            const loginLink = document.getElementById('login-link');
+            const signupLink = document.getElementById('signup-link');
+            if (loginLink) loginLink.style.display = 'none';
+            if (signupLink) signupLink.style.display = 'none';
+          }
+        });
+      </script>
+      
+      
+      
+</body>
+<script src="deals.js"></script>
