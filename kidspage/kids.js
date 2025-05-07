@@ -442,6 +442,7 @@ function displayPage(productData) {
         atw.addEventListener("click", function() {
             addToWishlist(elem)
             atw.style.color = "green"
+            atw.style.fontWeight = "bold"
             atw.innerText = "ADDED TO WISHLIST"
         })
 

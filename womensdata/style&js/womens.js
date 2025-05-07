@@ -502,6 +502,7 @@ womensData.map(function(element) {
     wishList.addEventListener("click", function() {
         addToWishlist(element);
         wishList.style.color = "green";
+        wishList.style.fontWeight = "bold";
         wishList.innerText = "ADDED TO WISHLIST";
     });
     
@@ -512,6 +513,7 @@ womensData.map(function(element) {
     
     addToBag.addEventListener("click", function() {
         addToBaglist(element);
+        addToBag.style.backgroundColor = "green"
         addToBag.innerText = "ADDED TO BAG";
     });
     
