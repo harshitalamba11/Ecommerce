@@ -394,85 +394,74 @@ function filterBrand() {
 
 
 function displayPage(productData) {
-
     document.getElementById("container").innerHTML = "";
 
-    productData.map(function(elem) {
-        var box = document.createElement("div")
-        box.style.cursor = "pointer"
+    productData.map(function(elem, index) {
+        var box = document.createElement("div");
+        box.style.cursor = "pointer";
 
-        var img = document.createElement("img")
-        img.src = elem.image_url
+        var img = document.createElement("img");
+        img.src = elem.image_url;
+
+        // Add click event to redirect to the respective product page
+        box.addEventListener("click", function() {
+            window.location.href = `product${index + 1}.html`; // Adjust the URL as needed
+        });
 
         var contentBox = document.createElement('div');
-        contentBox.setAttribute('class', 'contentBox')
+        contentBox.setAttribute('class', 'contentBox');
 
-        var brand = document.createElement("h4")
-        brand.textContent = elem.brand
+        var brand = document.createElement("h4");
+        brand.textContent = elem.brand;
 
-        var productname = document.createElement("p")
-        productname.textContent = elem.para
+        var productname = document.createElement("p");
+        productname.textContent = elem.para;
 
+        var mix = document.createElement("div");
+        mix.setAttribute("class", "mixbox");
 
-        var mix = document.createElement("div")
-        mix.setAttribute("class", "mixbox")
+        var price = document.createElement("p");
+        price.textContent = elem.price;
 
+        var strprice = document.createElement("p");
+        strprice.textContent = elem.strikedoffprice;
+        strprice.setAttribute("class", "strikep");
 
-        var price = document.createElement("p")
-        price.textContent = elem.price
+        var offer = document.createElement("p");
+        offer.textContent = elem.offer;
+        offer.setAttribute("class", "offerp");
 
-        var strprice = document.createElement("p")
-        strprice.textContent = elem.strikedoffprice
-        strprice.setAttribute("class", "strikep")
+        mix.append(price, strprice, offer);
 
-
-        var offer = document.createElement("p")
-        offer.textContent = elem.offer
-        offer.setAttribute("class", "offerp")
-
-        mix.append(price, strprice, offer)
-
-        
-
-        var atw = document.createElement("p")
-        atw.setAttribute("class", "wishListp")
+        var atw = document.createElement("p");
+        atw.setAttribute("class", "wishListp");
         atw.textContent = elem.atw;
-        atw.style.cursor = "pointer"
+        atw.style.cursor = "pointer";
 
-        atw.addEventListener("click", function() {
-            addToWishlist(elem)
-            atw.style.color = "green"
-            atw.style.fontWeight = "bold"
-            atw.innerText = "ADDED TO WISHLIST"
-        })
+        atw.addEventListener("click", function(event) {
+            event.stopPropagation(); // Prevent the click from bubbling up to the box
+            addToWishlist(elem);
+            atw.style.color = "green";
+            atw.innerText = "ADDED TO WISHLIST";
+        });
 
-
-      
-        var atc = document.createElement("p")
-        atc.setAttribute("class", "addToBagp")
+        var atc = document.createElement("p");
+        atc.setAttribute("class", "addToBagp");
         atc.textContent = elem.atc;
-        atc.style.cursor = "pointer"
+        atc.style.cursor = "pointer";
 
+        atc.addEventListener("click", function(event) {
+            event.stopPropagation(); // Prevent the click from bubbling up to the box
+            addToBag(elem);
+            atc.innerText = "ADDED TO BAG";
+        });
 
-        atc.addEventListener("click", function() {
-            addToBag(elem)
-            atc.style.backgroundColor = "green"
-            atc.innerText = "ADDED TO BAG"
-        })
-
-        contentBox.append(brand, productname, mix, atw, atc)
-
-        box.append(img, contentBox)
+        contentBox.append(brand, productname, mix, atw, atc);
+        box.append(img, contentBox);
 
         document.querySelector("#container").append(box);
-
-
-
     });
-
 }
-
-
 
 function addToWishlist(element) {
     // console.log(element)

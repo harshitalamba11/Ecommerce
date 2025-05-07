@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Polo Assn.</title>
+    <link rel="stylesheet" href="../common files/style.css"> 
+    <link rel="stylesheet" href="product1.css"> <!-- Common product styles -->
+    <!-- Common styles -->
+    
+    <link rel="shortcut icon" type="image/png" href="../common files/image/favicon.png">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../common files/image/icon.jpg" alt="brandLogo">
+        </div>
+        <ul id="nav_bar">
+            <li><a href="../Landingpage/index.html">Home</a></li>
+            <li id="megamenu_container"><a href="../menspage/mens.html">men</a></li>
+            <li><a href="../womensdata/womens.html">women</a></li>
+            <li><a href="../kidspage/kids.html">kids</a></li>
+            <li><a href="../home living product/home_furnishing.html">home & living</a></li>
+            <li id="studio"><a href="../Beauty/Beauty.html">Beauty</a><span>new</span></li>
+        </ul>
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more">
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <div id="drop">
+                    <a href="../Profile/profile.html" class="dropList">login</a>
+                    <a href="../Profile/signup.html" class="dropList">sign up</a>
+                </div>
+                <i class="fa-regular fa-user"></i>
+                <span>profile</span>
+            </div>
+            <div>
+                <i class="fa-regular fa-heart"></i>
+                <a href="../wishlist/wishlist.html"><span>wishlist</span></a>
+            </div>
+            <div>
+               <a href="../wishlist/cart.html"> <i class="fa-solid fa-bag-shopping"></i></a>
+                <span>bag</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container clearfix">
+    <div class="product-image">
+    <img src="https://th.bing.com/th/id/OIP.Nx1Znf0M4a3wQzC1kTmdKgHaJ4?w=160&h=214&c=7&r=0&o=5&dpr=1.3&pid=1.7" id="main_img" alt="">
+      </div>
+      <div class="product-info">
+         <div class="urban-head">Click & Buy</div>
+         <div class="product-head">kids Printed Sliders</div>
+         <div class="product-price">
+            <span class="new_price">Rs. 674</span>
+            <span class="ori_price">Rs. 1499</span>
+            <div class="tax">(Incl. of all taxes)</div>
+         </div>
+         <div class="product-delivery">
+            <span class="truck_icon"><i class="ph-fill ph-truck"></i></span>
+            <div class="delivery">ENTER PINCODE</div>
+            <input type="text" placeholder="pincode" name="pincode" class="pincode">
+            <button class="pincode_chk_btn">Check</button>
+            <div class="pincode_chk"></div>
+         </div>
+         <div class="product-size">
+            <div class="size_text">Size: </div>
+            <div class="sizes">
+               <span class="size_box">XS</span>
+               <span class="size_box">S</span>
+               <span class="size_box">M</span>
+               <span class="size_box">L</span>
+               <span class="size_box">XL</span>
+               <span class="size_box">XXL</span>
+            </div>
+         </div>
+         <div class="add_to_cart">
+            
+            <button class="addtocart" onclick="addtocart('kids Printed Sliders', 92, 100, 'https://th.bing.com/th/id/OIP.Nx1Znf0M4a3wQzC1kTmdKgHaJ4?w=160&h=214&c=7&r=0&o=5&dpr=1.3&pid=1.7')">Add To Cart</button>
+        </div>
+         <a href="../wishlist/cart.html"><h2>Go To Cart</h2></a>
+      </div>
+      </div>
+   </div>
+   <!-- <div class="review-heading">
+      <span>Customer Reviews</span>
+   </div> -->
+   
+      
+               
+
+   
+   
+   
+
+    <footer>
+        <section id="section_1">
+            <div id="left">
+                <div>
+                    <h4>online shopping</h4>
+                    <p>men</p>
+                    <p>women</p>
+                    <p>home & living</p>
+                    <p>beauty</p>
+                    <p>gift cards</p>
+                    <p>C&B insider<span id="latest">New</span></p>
+                </div>
+                <div>
+                    <h4>useful links</h4>
+                    <p>men</p>
+                    <p>faq</p>
+                    <p>t&c</p>
+                    <p>terms of use</p>
+                    <p>track order</p>
+                    <p>shipping</p>
+                    </div>
+                    </div>
+                    </section>
+                    </footer>
+                    <script>
+                     function addtocart(productName, price, originalPrice, imageUrl) {
+  // Create cart item with correct format
+  const item = {
+    image_url: imageUrl,
+    brand: productName,
+    para: productName,
+    price: "Rs. " + price,
+    rs: price,
+    strikedoffprice: "Rs. " + originalPrice,
+    offer: Math.round((originalPrice - price) / originalPrice * 100) + "% OFF"
+  };
+  
+  // Get current cart
+  let bagData = JSON.parse(localStorage.getItem("BagListObj")) || [];
+  
+  // Add item
+  bagData.push(item);
+  
+  // Save to localStorage
+  localStorage.setItem("BagListObj", JSON.stringify(bagData));
+  
+  alert("Item added to cart!");
+}
+
+
+
+
+                     
+                     let pincodes = [143401, 151001, 143001, 151005, 160002, 160001, 141001, 142001, 148001, 140401, 147001, 148024];
+                     let pincodebtn = document.querySelector(".pincode_chk_btn");
+                     pincodebtn.addEventListener("click", checkPincode);
+                  
+                     function checkPincode() {
+                        let message = document.querySelector(".pincode_chk");
+                        let pincodeValue = document.querySelector(".pincode").value;
+                        let value = Number(pincodeValue);
+                  
+                        if (pincodes.includes(value)) {
+                           message.innerHTML = `Product available at your location`;
+                           message.style.color = "green";
+                        } else {
+                           message.innerHTML = `Product not available at your location`;
+                           message.style.color = "red";
+                        }
+                     }
+                  
+                     function addtocart(productName, price, strikedPrice, imageUrl) {
+   const cartItem = {
+      name: productName,
+      price: price,
+      strikedPrice: strikedPrice,
+      imageUrl: imageUrl,
+      quantity: 1
+   };
+
+   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+   const existingItem = cartItems.find(item => item.name === cartItem.name);
+   if (existingItem) {
+      existingItem.quantity += 1;
+   } else {
+      cartItems.push(cartItem);
+   }
+
+   localStorage.setItem("cartItems", JSON.stringify(cartItems));
+   alert("Product added to cart!");
+}
+
+                  
+                  
+                  
+                  
+                                    </script>
+                    </body>
+                   
+                  <script src="cart.js"></script>
+                  <script src="kids.js"></script>
+                    </html>
+                    

@@ -1,300 +1,300 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
- }
- 
- body {
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-    padding-top: 110px; /* Prevent content from going under header */
- }
- 
- /* ----- HEADER CSS (Unchanged) ----- */
- header {
-    width: 100%;
-    height: 110px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgb(13, 222, 222);
-    opacity: 1;
-    z-index: 1000;
- }
- header > * {
-    height: 100%;
- }
- /* ... Rest of your header code unchanged ... */
- 
- /* ----- PRODUCT LAYOUT ----- */
- .container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    gap: 30px;
-    align-items: flex-start;
- }
- 
- .product-image {
-    width: 40%;
-    padding: 10px;
- }
- 
- #main_img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
- }
- 
- .product-info {
-    width: 60%;
-    padding: 20px 40px;
-    background-color: #fafafa;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
- }
- 
- .urban-head {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
- }
- 
- .product-head {
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #111;
- }
- 
- .product-price {
-    margin: 20px 0;
- }
- 
- .new_price {
-    font-size: 26px;
-    font-weight: bold;
-    color: #e53935;
-    margin-right: 15px;
- }
- 
- .ori_price {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 18px;
- }
- 
- .tax {
-    font-size: 14px;
-    color: #777;
-    margin-top: 5px;
- }
- 
- /* Pincode Check Section */
- .product-delivery {
-    margin: 25px 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
- }
- .delivery{
-    font-size: large;
- }
- 
- .pincode {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 150px;
-    font-size: 20px;
- }
- 
- .pincode_chk_btn {
-    padding: 10px 18px;
-    background: linear-gradient(to right, #000000, #434343);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
- }
- 
- .pincode_chk_btn:hover {
-    background: linear-gradient(to right, #434343, #000000);
-    transform: scale(1.05);
- }
- 
- /* Size Selector */
- .product-size {
-    margin: 30px 0;
- }
- 
- .size_text {
-    margin-bottom: 12px;
-    font-weight: bold;
-    font-size: 20px;
- }
- 
- .sizes {
-    display: flex;
-    gap: 12px;
- }
- 
- .size_box {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 5px;
- }
- 
- .size_box:hover {
-    border-color: #000;
-    transform: scale(1.1);
-    background-color: #f9f9f9;
- }
- 
- /* Add to Cart */
- .add_to_cart {
-    margin: 25px 0;
- }
- 
- .addtocart {
-    padding: 14px 22px;
-    background: linear-gradient(to right, #e53935, #ff6f61);
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.3s ease-in-out;
-    width: 80%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
- 
- .addtocart:hover {
-    background: linear-gradient(to right, #ff6f61, #e53935);
-    transform: scale(1.03);
- }
- 
- /* Go to Cart link */
- .product-info a {
-    display: inline-block;
-    margin-top: 12px;
-    color: #e53935;
-    text-decoration: underline;
-    font-weight: 600;
- }
- 
- .product-info a:hover {
-    color: #c62828;
- }
- 
- /* Review Heading */
- .review-heading {
-    clear: both;
-    padding: 50px 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    border-top: 1px solid #eee;
-    margin-top: 40px;
- }
- 
- /* Footer */
- footer {
-    background-color: #f5f5f6;
-    padding: 40px 20px;
-    margin-top: 40px;
- }
- 
- #section_1 {
-    max-width: 1200px;
-    margin: 0 auto;
- }
- 
- #left {
-    display: flex;
-    gap: 40px;
- }
- 
- #left div {
-    width: 25%;
- }
- 
- #left h4 {
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    font-size: 14px;
- }
- 
- #left p {
-    margin-bottom: 8px;
-    color: #666;
-    font-size: 14px;
-    cursor: pointer;
- }
- 
- #left p:hover {
-    color: #e53935;
- }
- 
- #latest {
-    background-color: #e53935;
-    color: white;
-    font-size: 10px;
-    padding: 2px 4px;
-    border-radius: 4px;
-    margin-left: 5px;
- }
- 
- /* Clearfix */
- .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
- }
- 
- /* Responsive */
- @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 20px;
-    }
- 
-    .product-image,
-    .product-info {
-        width: 100%;
-    }
- 
-    .addtocart {
-        font-size: 16px;
-    }
- 
-    .product-head {
-        font-size: 24px;
-    }
- }
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+
+body {
+   background-color: #fff;
+   color: #333;
+   line-height: 1.6;
+   padding-top: 110px; /* Prevent content from going under header */
+}
+
+/* ----- HEADER CSS (Unchanged) ----- */
+header {
+   width: 100%;
+   height: 110px;
+   box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: rgb(13, 222, 222);
+   opacity: 1;
+   z-index: 1000;
+}
+header > * {
+   height: 100%;
+}
+/* ... Rest of your header code unchanged ... */
+
+/* ----- PRODUCT LAYOUT ----- */
+.container {
+   display: flex;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 40px 20px;
+   gap: 30px;
+   align-items: flex-start;
+}
+
+.product-image {
+   width: 40%;
+   padding: 10px;
+}
+
+#main_img {
+   width: 100%;
+   height: auto;
+   max-height: 400px;
+   object-fit: contain;
+   border-radius: 10px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+   width: 60%;
+   padding: 20px 40px;
+   background-color: #fafafa;
+   border-radius: 10px;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.urban-head {
+   font-size: 20px;
+   color: #666;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+.product-head {
+   font-size: 34px;
+   font-weight: 700;
+   margin-bottom: 20px;
+   color: #111;
+}
+
+.product-price {
+   margin: 20px 0;
+}
+
+.new_price {
+   font-size: 26px;
+   font-weight: bold;
+   color: #e53935;
+   margin-right: 15px;
+}
+
+.ori_price {
+   text-decoration: line-through;
+   color: #999;
+   font-size: 18px;
+}
+
+.tax {
+   font-size: 14px;
+   color: #777;
+   margin-top: 5px;
+}
+
+/* Pincode Check Section */
+.product-delivery {
+   margin: 25px 0;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+.delivery{
+   font-size: large;
+}
+
+.pincode {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+   width: 150px;
+   font-size: 20px;
+}
+
+.pincode_chk_btn {
+   padding: 10px 18px;
+   background: linear-gradient(to right, #000000, #434343);
+   color: #fff;
+   border: none;
+   border-radius: 6px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.pincode_chk_btn:hover {
+   background: linear-gradient(to right, #434343, #000000);
+   transform: scale(1.05);
+}
+
+/* Size Selector */
+.product-size {
+   margin: 30px 0;
+}
+
+.size_text {
+   margin-bottom: 12px;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.sizes {
+   display: flex;
+   gap: 12px;
+}
+
+.size_box {
+   width: 50px;
+   height: 50px;
+   border: 2px solid #ccc;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: large;
+   font-weight: 500;
+   cursor: pointer;
+   transition: 0.3s;
+   border-radius: 5px;
+}
+
+.size_box:hover {
+   border-color: #000;
+   transform: scale(1.1);
+   background-color: #f9f9f9;
+}
+
+/* Add to Cart */
+.add_to_cart {
+   margin: 25px 0;
+}
+
+.addtocart {
+   padding: 14px 22px;
+   background: linear-gradient(to right, #e53935, #ff6f61);
+   color: #fff;
+   border: none;
+   font-size: 18px;
+   font-weight: bold;
+   cursor: pointer;
+   border-radius: 6px;
+   transition: all 0.3s ease-in-out;
+   width: 80%;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addtocart:hover {
+   background: linear-gradient(to right, #ff6f61, #e53935);
+   transform: scale(1.03);
+}
+
+/* Go to Cart link */
+.product-info a {
+   display: inline-block;
+   margin-top: 12px;
+   color: #e53935;
+   text-decoration: underline;
+   font-weight: 600;
+}
+
+.product-info a:hover {
+   color: #c62828;
+}
+
+/* Review Heading */
+.review-heading {
+   clear: both;
+   padding: 50px 20px;
+   text-align: center;
+   font-size: 24px;
+   font-weight: bold;
+   border-top: 1px solid #eee;
+   margin-top: 40px;
+}
+
+/* Footer */
+footer {
+   background-color: #f5f5f6;
+   padding: 40px 20px;
+   margin-top: 40px;
+}
+
+#section_1 {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+#left {
+   display: flex;
+   gap: 40px;
+}
+
+#left div {
+   width: 25%;
+}
+
+#left h4 {
+   text-transform: uppercase;
+   margin-bottom: 15px;
+   font-size: 14px;
+}
+
+#left p {
+   margin-bottom: 8px;
+   color: #666;
+   font-size: 14px;
+   cursor: pointer;
+}
+
+#left p:hover {
+   color: #e53935;
+}
+
+#latest {
+   background-color: #e53935;
+   color: white;
+   font-size: 10px;
+   padding: 2px 4px;
+   border-radius: 4px;
+   margin-left: 5px;
+}
+
+/* Clearfix */
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+   .container {
+       flex-direction: column;
+       padding: 20px;
+   }
+
+   .product-image,
+   .product-info {
+       width: 100%;
+   }
+
+   .addtocart {
+       font-size: 16px;
+   }
+
+   .product-head {
+       font-size: 24px;
+   }
+}

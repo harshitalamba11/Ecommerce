@@ -1,89 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="address.css">
-    <title>Address | Checkout</title>
+    <title>ECOMMERCE WEBSITE DOWNLOAD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Jost", sans-serif;
+        }
+
+        body {
+            background: #efefef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        section {
+            max-width: 95%;
+            max-height: 90vh;
+            width: 700px;
+            background: #fff;
+            padding: 50px;
+            overflow-y: auto;
+            border-top: 12px solid #0989ff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #010f1c;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #010f1c;
+        }
+
+        .flex input {
+            border: 1px solid #ccc;
+            outline: none;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: border 0.3s ease;
+        }
+
+        .flex input:focus {
+            border-color: #0989ff;
+        }
+
+        .m10 {
+            margin-top: 10px;
+        }
+
+        .m20 {
+            margin-top: 20px;
+        }
+
+        button {
+            width: 100%;
+            max-width: 250px;
+            height: 55px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: #0989ff;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0870d0;
+        }
+
+        .cod_option {
+            background: #333;
+            margin-top: 10px;
+        }
+
+        .cod_option:hover {
+            background: #111;
+        }
+
+        .get_qr {
+            height: 220px;
+            width: 220px;
+            border: 1px solid #999;
+            background: #efefef;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .qr_code {
+            width: 100%;
+            display: none;
+        }
+
+        p {
+            color: #444;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .im {
+            max-width: 100%;
+            width: 300px;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="navbar">
-        <img id="logo" src="../common files/image/icon.jpg"alt="logo">
+    <section>
+        <h1>ECOMMERCE WEBSITE CODE</h1>
+        <div class="form">
+            <div class="flex m20">
+                <label>Full Name*</label>
+                <input type="text" placeholder="Full Name" class="m10 name">
+            </div>
+            <div class="flex m20">
+                <label>WhatsApp Number (With ISD)*</label>
+                <input type="text" placeholder="Ex: +91XXXXXXXXXX" class="m10 number">
+            </div>
+            <div class="flex m20">
+                <label>Email*</label>
+                <input type="email" placeholder="Email" class="m10 email">
+            </div>
+            <div class="flex m20">
+                <button class="generate_qr">Pay with UPI</button>
+                <button class="cod_option">Cash on Delivery</button>
+            </div>
+        </div>
 
-        <div id="div2">
-            <h5 id="first">BAG</h5>
-            <div class="line"></div>
-            <h5>ADDRESS</h5>
-            <div class="line"></div>
-            <h5 id="third">PAYMENT</h5>
-        </div>
-        <div id="div3">
-            <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="">
-            <p>100 % <b>SECURE</b></p>
-        </div>
-    </div>
-    <div id="cart">
-        <div id="div">
-            <div>
-                <h3>Select Delivery Address </h3>
-                <div>
-                    <h5>ADD NEW ADDRESS</h5>
-                </div>
+        <div class="qr_code m20">
+            <p>Scan the QR Code using any UPI App to pay. Then enter your transaction ID below to download.</p>
+            <img src="" alt="QR CODE" class="get_qr m20">
+            <div class="flex m20">
+                <!-- <label>UTR/REFERENCE/TRANSACTION ID*</label>
+                <input type="text" placeholder="Enter UTR/REFERENCE ID" class="m10 id"> -->
             </div>
-            <h5>DEFAULT ADDRESS</h5>
-            <div>
-                <div id="name">
-                    <div>
-                        <h4>Sumit Kumar</h4>
-                    </div>
-                    <div id="home">Home</div>
-                </div>
-                <p>House No-C12,Old Extension Road,Gandhi Road,Karmik Nagar <br>Dhanbad,Jharkhand,PIN-123456</p>
-                <p>Mobile No: <b>2314567898</b></p>
-                <p>Pay on Delivery</p>
-                <div id="option">
-                   <div>
-                       Remove
-                   </div> 
-                   <div>
-                       EDIT
-                   </div>
-                </div>
-            </div>
-            <div id="add">
-                 +Add New Address  
-            </div>
+            <button class="download_now m20">Download Now</button>
         </div>
-        <div id="checkDiv">
-           
-            <div id="itemDiv">
-                <h5>DELIVERY ESTIMATES</h5>
-                Order will be Delivered soon 
-                <br>
-                
-            </div>
-            <a href="payment.html"> <div id="place">
-            CONTINUE
-         </div></a>
-        </div>
-    </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            let amount = localStorage.getItem('totalpayment') || 'upi://pay?pa=abc@upi&pn=YourShopName&am=100';
+
+            $(".generate_qr").click(function () {
+                let num = $(".number").val();
+                if (num === "") {
+                    alert("Please enter your phone number first.");
+                    return;
+                }
+
+                $(".form").hide();
+                $(".qr_code").show();
+                var link = amount + "&tn=" + num;
+                var upi = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(link);
+                $(".get_qr").attr("src", upi);
+            });
+
+            $(".download_now").click(function () {
+                var name = $(".name").val();
+                var num = $(".number").val();
+                var email = $(".email").val();
+                var id = $(".id").val();
+                if (num && name && email && id) {
+                    alert("Transaction verified! Your download will start.");
+                    // Add download trigger here if needed
+                } else {
+                    alert("Please fill in all fields and provide your transaction ID.");
+                }
+            });
+
+            $(".cod_option").click(function () {
+    var name = $(".name").val();
+    var num = $(".number").val();
+    var email = $(".email").val();
+    if (num && name && email) {
+        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("number", num);
+        sessionStorage.setItem("email", email);
+        window.location.href = "otp.html";
+    } else {
+        alert("Please fill in all required fields first.");
+    }
+});
+
+        });
+    </script>
 </body>
-
 </html>
-<script>
-    document.querySelector('img').addEventListener('click', function(){
-        window.location.href = "../Landingpage/index.html"
-    })
-
-document.getElementById('first').addEventListener('click', function(){
-window.location.href = "../wishlist/cart.html"
-})
-  document.getElementById('third').addEventListener('click', function(){
-  window.location.href = "../payment/payment.html"
-})
-</script>
-

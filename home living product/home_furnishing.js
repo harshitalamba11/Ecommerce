@@ -495,99 +495,74 @@ var funitureData = [
   
   
   
-    function displayPage(funitureData) {
-  
-    document.getElementById("container").innerHTML = "";
-        
-         //  total
-  
-    funitureData.map(function (element) {
-  
-      var box = document.createElement("div")
-      box.style.borderRadius = "20px"; 
-      box.style.cursor = "pointer"
-     
-      var img = document.createElement("img");
-img.src = element.image_url;
-
-img.style.width = "100%";
-img.style.display = "block";
-box.style.transition = "border-radius 0.3s ease"; // Smooth transition
-img.style.borderRadius = "0px"; 
-
-box.addEventListener("mouseover", function () {
-  img.style.borderTopLeftRadius = "20px";
-  img.style.borderTopRightRadius = "20px";
-});
-
-
-box.addEventListener("mouseout", function () {
-  img.style.borderTopLeftRadius = "0px";
-  img.style.borderTopRightRadius = "0px";
-});
+      function displayPage(funitureData) {
+        document.getElementById("container").innerHTML = "";
     
-      var contentBox = document.createElement('div'); 
-      contentBox.style.borderRadius = "20px"; 
-      contentBox.setAttribute('class', 'contentBox')
+        funitureData.map(function (element, index) {
+            var box = document.createElement("div");
+            box.style.cursor = "pointer";
     
-      var brand = document.createElement("h4")
-      brand.textContent = element.brand
+            // Add click event to the entire box
+            box.addEventListener("click", function() {
+                window.location.href = `product${index + 1}.html`; // Redirect to the respective product page
+            });
     
-      var para = document.createElement("p")
-      para.textContent = element.para
+            var img = document.createElement("img");
+            img.src = element.image_url;
     
-      var mix = document.createElement("div")
-      mix.style.borderRadius = "20px"; 
-      mix.setAttribute("class","mixbox")
+            var contentBox = document.createElement('div');
+            contentBox.setAttribute('class', 'contentBox');
     
-      var price = document.createElement("p")
-      price.textContent = element.price
+            var brand = document.createElement("h4");
+            brand.textContent = element.brand;
     
-      var strikeprice = document.createElement("p")
-      strikeprice.textContent = element.strikedoffprice
-      strikeprice.setAttribute("class","strikep")
-      
-      var offer = document.createElement("p")
-      offer.textContent = element.offer
-      offer.setAttribute("class","offerp")
-      
-      mix.append(price,strikeprice, offer)
+            var para = document.createElement("p");
+            para.textContent = element.para;
     
-      var wishList = document.createElement("p")
-      wishList.setAttribute("class", "wishListp")
-      wishList.textContent = element.wishList
-      wishList.style.cursor = "pointer"
-      
-      wishList.addEventListener("click", function() {
-        addToWishlist(element)
-        wishList.style.color ="green"
-        wishList.style.fontWeight = "bold"
-        wishList.innerText = "ADDED TO WISHLIST"
-      })
+            var mix = document.createElement("div");
+            mix.setAttribute("class", "mixbox");
     
-      var addToBag = document.createElement("p")
-      addToBag.setAttribute("class" , "addToBagp")
-      addToBag.textContent = element.addToBag;
-      addToBag.style.cursor = "pointer"
+            var price = document.createElement("p");
+            price.textContent = element.price;
     
+            var strikeprice = document.createElement("p");
+            strikeprice.textContent = element.strikedoffprice;
+            strikeprice.setAttribute("class", "strikep");
     
-      addToBag.addEventListener("click", function() {
-        addToBaglist(element)
-        addToBag.style.backgroundColor = "green"
-        addToBag.innerText = "ADDED TO BAG"
-      })
-      
-      contentBox.append(brand, para, mix, wishList, addToBag)
-  
-      box.append(img, contentBox)
+            var offer = document.createElement("p");
+            offer.textContent = element.offer;
+            offer.setAttribute("class", "offerp");
     
-      document.querySelector("#container").append(box)
+            mix.append(price, strikeprice, offer);
     
-    })
+            var wishList = document.createElement("p");
+            wishList.setAttribute("class", "wishListp");
+            wishList.textContent = element.wishList;
+            wishList.style.cursor = "pointer";
     
-    // total end
-  }
-  
+            wishList.addEventListener("click", function(event) {
+                event.stopPropagation(); // Prevent the click from bubbling up to the box
+                addToWishlist(element);
+                wishList.style.color = "green";
+                wishList.innerText = "ADDED TO WISHLIST";
+            });
+    
+            var addToBag = document.createElement("p");
+            addToBag.setAttribute("class", "addToBagp");
+            addToBag.textContent = element.addToBag;
+            addToBag.style.cursor = "pointer";
+    
+            addToBag.addEventListener("click", function(event) {
+                event.stopPropagation(); // Prevent the click from bubbling up to the box
+                addToBaglist(element);
+                addToBag.innerText = "ADDED TO BAG";
+            });
+    
+            contentBox.append(brand, para, mix, wishList, addToBag);
+            box.append(img, contentBox);
+            document.querySelector("#container").append(box);
+        });
+    }
   
   
   function addToWishlist(element) {

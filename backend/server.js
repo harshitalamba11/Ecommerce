@@ -27,14 +27,3 @@ app.use("/api/cart", cartRoutes);
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
-
-
-const productRoutes = require("./routes/products");
-
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-  
-  app.use("/products", productRoutes);
-  
