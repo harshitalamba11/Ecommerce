@@ -504,12 +504,30 @@ var funitureData = [
     funitureData.map(function (element) {
   
       var box = document.createElement("div")
+      box.style.borderRadius = "20px"; 
       box.style.cursor = "pointer"
      
-      var img = document.createElement("img")
-      img.src = element.image_url
+      var img = document.createElement("img");
+img.src = element.image_url;
+
+img.style.width = "100%";
+img.style.display = "block";
+box.style.transition = "border-radius 0.3s ease"; // Smooth transition
+img.style.borderRadius = "0px"; 
+
+box.addEventListener("mouseover", function () {
+  img.style.borderTopLeftRadius = "20px";
+  img.style.borderTopRightRadius = "20px";
+});
+
+
+box.addEventListener("mouseout", function () {
+  img.style.borderTopLeftRadius = "0px";
+  img.style.borderTopRightRadius = "0px";
+});
     
       var contentBox = document.createElement('div'); 
+      contentBox.style.borderRadius = "20px"; 
       contentBox.setAttribute('class', 'contentBox')
     
       var brand = document.createElement("h4")
@@ -519,6 +537,7 @@ var funitureData = [
       para.textContent = element.para
     
       var mix = document.createElement("div")
+      mix.style.borderRadius = "20px"; 
       mix.setAttribute("class","mixbox")
     
       var price = document.createElement("p")
@@ -542,6 +561,7 @@ var funitureData = [
       wishList.addEventListener("click", function() {
         addToWishlist(element)
         wishList.style.color ="green"
+        wishList.style.fontWeight = "bold"
         wishList.innerText = "ADDED TO WISHLIST"
       })
     
@@ -553,6 +573,7 @@ var funitureData = [
     
       addToBag.addEventListener("click", function() {
         addToBaglist(element)
+        addToBag.style.backgroundColor = "green"
         addToBag.innerText = "ADDED TO BAG"
       })
       

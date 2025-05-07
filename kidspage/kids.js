@@ -455,6 +455,7 @@ function displayPage(productData) {
 
         atc.addEventListener("click", function() {
             addToBag(elem)
+            atc.style.backgroundColor = "green"
             atc.innerText = "ADDED TO BAG"
         })
 

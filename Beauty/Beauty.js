@@ -399,12 +399,27 @@ function displayPage(productData) {
 
     productData.map(function(elem) {
         var box = document.createElement("div")
+        box.style.borderRadius = "20px"; 
         box.style.cursor = "pointer"
 
         var img = document.createElement("img")
+        box.style.borderRadius = "20px"; 
         img.src = elem.image_url
+        
+        img.style.width = "100%";
+        img.style.display = "block";
+        box.style.transition = "border-radius 0.3s ease"; 
+        img.style.borderRadius = "0px"; 
+        box.addEventListener("mouseover", function () {
+        img.style.borderTopLeftRadius = "20px";
+        img.style.borderTopRightRadius = "20px";
+        });
 
-        var contentBox = document.createElement('div');
+        box.addEventListener("mouseout", function () {
+        img.style.borderTopLeftRadius = "0px";
+        img.style.borderTopRightRadius = "0px";
+        });
+        var contentBox = document.createElement('div');box.style.borderRadius = "20px"; 
         contentBox.setAttribute('class', 'contentBox')
 
         var brand = document.createElement("h4")
@@ -441,6 +456,7 @@ function displayPage(productData) {
 
         atw.addEventListener("click", function() {
             addToWishlist(elem)
+            atw.style.fontWeight = "bold"
             atw.style.color = "green"
             atw.innerText = "ADDED TO WISHLIST"
         })
@@ -455,6 +471,7 @@ function displayPage(productData) {
 
         atc.addEventListener("click", function() {
             addToBag(elem)
+            atc.style.backgroundColor = "green"
             atc.innerText = "ADDED TO BAG"
         })
 
@@ -481,6 +498,7 @@ function addToWishlist(element) {
 function addToBag(element) {
     // console.log(element)
     bagData.push(element)
+    
     localStorage.setItem("BagListObj", JSON.stringify(bagData))
 }
 
