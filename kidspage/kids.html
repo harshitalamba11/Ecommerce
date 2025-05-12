@@ -18,13 +18,14 @@
             <img src="../common files/image/icon.jpg" alt="brandLogo">
         </div>
         <ul id="nav_bar">
-            <li><a href="../Landingpage/index.html">Home</a></li>
-            <li id="megamenu_container"><a href="../menspage/mens.html">men</a></li>
-            <li><a href="../womensdata/womens.html">women</a></li>
-            <li><a href="../kidspage/kids.html">kids</a></li>
-            <li><a href="../home living product/home_furnishing.html">home & living</a></li>
-            <li id="studio"><a href="../Beauty/Beauty.html">Beauty</a><span>new</span></li>
-        </ul>
+    <li><a href="../Landingpage/index.html" class="nav-link">Home</a></li>
+    <li id="megamenu_container"><a href="../menspage/mens.html" class="nav-link">Men</a></li>
+    <li><a href="../womensdata/womens.html" class="nav-link">Women</a></li>
+    <li><a href="../kidspage/kids.html" class="nav-link">Kids</a></li>
+    <li><a href="../home living product/home_furnishing.html" class="nav-link">Home & Living</a></li>
+    <li id="studio"><a href="../Beauty/Beauty.html" class="nav-link">Beauty</a><span>new</span></li>
+</ul>
+
         <div id="search">
             <input type="text" id="search_bar" placeholder="Search for products, brands and more">
             <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
@@ -73,7 +74,7 @@
 
     <div id="sorting">
 
-        <select class="filter" style="color:black;font-weight: 500; margin: 12px;" id="brandFilter">
+        <select class="filter" style="color:black;font-weight: 500;border-radius:10px; margin: 7px;" id="brandFilter">
             <option id="normal" value="all">FILTER BY BRAND</option>
             <option value="U.S. Polo Assn.">U.S. Polo Assn.</option>
             <option value="Roadster">Roadster</option>
@@ -85,13 +86,13 @@
             <option value="Flying Machine">Flying Machine</option>         
           </select>
 
-        <select class="filter" style="color:black;font-weight: 500; margin: 12px;" id="priceSort">
+        <select class="filter" style="color:black;font-weight: 500;border-radius:10px; margin: 5px;" id="priceSort">
             <option value="---">SORT BY PRICE</option>
             <option value="lth">Low → High</option>
             <option value="htl">High → Low</option>
           </select>
 
-        <select class="filter" style="color:black;font-weight: 500; margin: 12px;" id="nameSort">
+        <select class="filter" style="color:black;font-weight: 500;border-radius:10px; margin: 5px;" id="nameSort">
             <option value="---">SORT BY NAME</option>
             <option value="asc">Ascending</option>
             <option value="dsc">Descending</option>
@@ -171,6 +172,17 @@
         </section>
 
     </footer>
+<script>
+  const currentPage = window.location.pathname.split("/").pop(); // Get current file name (e.g., mens.html)
+
+  document.querySelectorAll("#nav_bar .nav-link").forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop(); // Get file name from href
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
 
 </body>
 

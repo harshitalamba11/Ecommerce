@@ -4,6 +4,11 @@
     margin-left: 1rem;
     margin-top: 15rem;
 }
+.nav-link.active {
+    font-weight: bold;
+    color: #ff4081;
+    border-bottom: 6px solid #f48cae;
+}
 
 .filter {
     padding: 10px 20px;

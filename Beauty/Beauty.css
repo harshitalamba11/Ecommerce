@@ -8,6 +8,17 @@
     padding: 10px 20px;
 }
 
+.product-box:hover {
+    transform: scale(1.05);
+    width: 500px; /* effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.nav-link.active {
+    font-weight: bold;
+    color: #ff4081;
+    border-bottom: 6px solid #f48cae;
+}
+
 * {
     box-sizing: border-box;
 }

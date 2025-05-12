@@ -579,7 +579,17 @@ var funitureData = [
   }
   
   // Filter
-  
+
+  const currentPage = window.location.pathname.split("/").pop(); // Get current file name (e.g., mens.html)
+
+  document.querySelectorAll("#nav_bar .nav-link").forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop(); // Get file name from href
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
   
   
   // LANDING PAGE
