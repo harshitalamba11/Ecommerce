@@ -465,7 +465,15 @@ function displayPage(productData) {
     });
 }
 
-
+document.getElementById('search_bar').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    const filteredData = productData.filter(product =>
+        product.brand.toLowerCase().includes(searchTerm) ||
+        product.para.toLowerCase().includes(searchTerm) ||
+        product.category.toLowerCase().includes(searchTerm)
+    );
+    displayPage(filteredData);
+});
 function addToWishlist(element) {
     // console.log(element)
     wishListData.push(element)
