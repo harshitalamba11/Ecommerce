@@ -557,6 +557,7 @@ function displayPage(productData) {
             event.stopPropagation(); // Prevent the click from bubbling up to the box
             addToWishlist(elem);
             atw.style.color = "green";
+            atw.style.fontWeight = "bold";
             atw.innerText = "ADDED TO WISHLIST";
         });
 
@@ -568,6 +569,9 @@ function displayPage(productData) {
         atc.addEventListener("click", function(event) {
             event.stopPropagation(); // Prevent the click from bubbling up to the box
             addToBag(elem);
+            atc.style.backgroundColor = "green";
+            atc.style.color = "white"; // Change text color to white for better visibility
+            atc.style.fontWeight = "bold";
             atc.innerText = "ADDED TO BAG";
         });
 

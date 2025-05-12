@@ -544,6 +544,7 @@ var funitureData = [
                 event.stopPropagation(); // Prevent the click from bubbling up to the box
                 addToWishlist(element);
                 wishList.style.color = "green";
+                wishList.style.fontWeight = "bold";
                 wishList.innerText = "ADDED TO WISHLIST";
             });
     
@@ -555,6 +556,8 @@ var funitureData = [
             addToBag.addEventListener("click", function(event) {
                 event.stopPropagation(); // Prevent the click from bubbling up to the box
                 addToBaglist(element);
+                addToBag.style.color = "white";
+                addToBag.style.fontWeight = "bold";
                 addToBag.innerText = "ADDED TO BAG";
             });
     
